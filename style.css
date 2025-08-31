@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.clock-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    min-width: 400px;
+}
+
+.digital-clock {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+.date {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.alarm-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.alarm-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.alarm-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.time-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.time-input input {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 80px;
+}
+
+.time-input input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.time-input input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.colon {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.alarm-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(238, 90, 36, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.stop-btn {
+    background: linear-gradient(45deg, #74b9ff, #0984e3);
+    box-shadow: 0 4px 15px rgba(9, 132, 227, 0.4);
+}
+
+.stop-btn:hover {
+    box-shadow: 0 6px 20px rgba(9, 132, 227, 0.6);
+}
+
+.alarm-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alarm-set {
+    background: rgba(46, 204, 113, 0.2);
+    border: 1px solid rgba(46, 204, 113, 0.5);
+    color: #2ecc71;
+}
+
+.alarm-ringing {
+    background: rgba(231, 76, 60, 0.2);
+    border: 1px solid rgba(231, 76, 60, 0.5);
+    color: #e74c3c;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.alarm-off {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ringing-animation {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
