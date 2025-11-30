@@ -26,12 +26,14 @@ This app allows users to set alarms, view active alarms, delete alarms, and get 
 
 ## 📁 Folder Structure
 
+```
 alarm-clock/
 │
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
+```
 
 ---
 
